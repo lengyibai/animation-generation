@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>冷弋白的网页</title>
+    <link rel="stylesheet" href="css/a.css">
+    <link rel="stylesheet" href="css/b.css">
+</head>
+
+<body>
+    <!-- 复制代码 -->
+    <div class="code">
+        <div class="tip">温馨提示：如果要对Z轴进行修改，需要给body加上
+            perspective: 1000px;还要给添加动画盒子的父盒子加上transform-style: preserve-3d;才能更好地呈现</div>
+        <p>点击下方代码进行复制</p>
+        <textarea name="" id="" cols="25" rows="8"></textarea>
+        <textarea name="" id="" cols="25" rows="8"></textarea>
+    </div>
+
+
+    <!-- 效果展示 -->
+    <div class="effect">
+        <div class="box">
+            <p>点我执行</p>
+        </div>
+    </div>
+
+    <!-- 设置参数 -->
+    <div class="parameter">
+        <!-- 单一动画 -->
+        <div class="Alone">
+            <p style="margin: .1rem
+            /* 15/150 */
+            0;
+        text-align: center;">单一动画</p>
+            <!-- 多个设置 -->
+            <div class="setPara">
+
+
+                <!-- translate -->
+                <div class="Translate">
+                    <!-- 顶部标题 -->
+                    <div class="title">
+                        <span class="A1">移动</span>
+                    </div>
+                    <!-- 初始位置 -->
+                    <div class="Twhere">
+                        <p class="goWhat gw1">来自何处</p>
+                        <div class="TX flex">
+                            <input style="--a:0;" type="text" placeholder="X轴">
+                        </div>
+                        <div class="TY flex">
+                            <input style="--a:1;" type="text" placeholder="Y轴">
+                        </div>
+                        <div class="TZ flex">
+                            <input style="--a:2;" type="text" placeholder="Z轴">
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Rotate -->
+                <div class="Rotate">
+                    <!-- 顶部标题 -->
+                    <div class="title">
+                        <span class="A2">旋转</span>
+                    </div>
+                    <!-- 初始位置 -->
+                    <div class="Rwhere">
+                        <p class="goWhat gw2">来前角度</p>
+                        <div class="RX flex">
+                            <input style="--a:0;" type="text" placeholder="X轴">
+                        </div>
+                        <div class="RY flex">
+                            <input style="--a:1;" type="text" placeholder="Y轴">
+                        </div>
+                        <div class="RZ flex">
+                            <input style="--a:2;" type="text" placeholder="Z轴">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scale -->
+                <div class="Scale">
+                    <!-- 顶部标题 -->
+                    <div class="title">
+                        <span class="A3">缩放</span>
+                    </div>
+                    <!-- 初始位置 -->
+                    <div class="Swhere">
+                        <p class="goWhat gw3">来前倍数</p>
+                        <div class="SX flex">
+                            <input type="text" placeholder="0-5">
+                        </div>
+                    </div>
+                </div>
+
+                <!--  skew -->
+                <div class="Skew">
+                    <!-- 顶部标题 -->
+                    <div class="title">
+                        <span class="A4">倾斜</span>
+                    </div>
+                    <!-- 初始位置 -->
+                    <div class="Skwhere">
+                        <p class="goWhat gw4">来前倾斜度</p>
+                        <div class="SkX flex">
+                            <input style="--a:0;" type="text" placeholder="X轴">
+                        </div>
+                        <div class="SkY flex">
+                            <input style="--a:2;" type="text" placeholder="Y轴">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 单箱操作 -->
+            <div class="alone">
+                <p class="A5" style="text-align: center;padding: 0.033rem
+                /* 5/150 */
+                0;">速度曲线</p>
+                <div class="speed">
+                    <div>
+                        <input style="--a:0;" type="button" name="cubic-bezier(0.39,0.57,0.56,1)" value="匀入缓停">
+                    </div>
+                    <div>
+                        <span></span>
+                        <input style="--a:1;" type="button" name="cubic-bezier(0.17,0.84,0.44,1)" id="ease-in" value="快入缓停">
+                    </div>
+                    <div>
+                        <span></span>
+                        <input style="--a:2;" type="button" name="cubic-bezier(0.23,1,0.32,1)" id="ease-out" value="快入缓停">
+                    </div>
+                    <div>
+                        <span></span>
+                        <input style="--a:3;" type="button" name="cubic-bezier(0.18,0.89,0.32,1.27)" id="" value="快入回停">
+                    </div>
+                    <div>
+                        <span></span>
+                        <input style="--a:4;" type="button" name="cubic-bezier(0.65,0.05,0.36,1)" id="linear" value="慢入快停">
+                    </div>
+                    <div>
+                        <span></span>
+                        <input style="--a:5;" type="button" name="cubic-bezier(0.79,0.14,0.15,0.86)" id="" value="慢入快行">
+                    </div>
+                    <div>
+                        <span></span>
+                        <input style="--a:6;" type="button" name="cubic-bezier(0.68,-0.55,0.27,1.55)" id="" value="回入回停">
+                    </div>
+                    <div>
+                        <span></span>
+                        <input style="--a:7;" type="button" name="cubic-bezier(0.6,-0.28,0.74,0.05)" id="" value="回入快停">
+                    </div>
+                </div>
+                <!-- 手动输入动画曲线 -->
+                <div class="inSpeed">
+                    <input type="text" style="width: 100%;" placeholder="手动输入动画曲线">
+                </div>
+                <!-- 最后一行 -->
+                <div class="last">
+                    <div class="opacity">
+                        <span>淡入/淡出</span>
+                        <input type="checkbox" name="" id="" checked>
+                    </div>
+                    <div class="go">
+                        <span>离开动画</span>
+                        <input type="checkbox" name="" id="">
+                    </div>
+                    <div class="text">
+                        <span>只显示文字</span>
+                        <input type="checkbox" name="" id="">
+                    </div>
+                    <div class="Time">
+                        <input type="text" placeholder="动画时长">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- JS -->
+    <script src="js/a.js"></script>
+    <script>
+
+    </script>
+</body>
+
+</html>

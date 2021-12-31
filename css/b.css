@@ -1,0 +1,315 @@
+.gw1 {
+    animation: B1 .5s ease-in-out infinite alternate;
+}
+
+@keyframes B1 {
+    0% {
+        transform: translateY(-10%);
+    }
+
+    100% {
+        transform: translateY(25%);
+    }
+}
+
+.gw2 {
+    animation: B2 .5s ease-in-out infinite alternate;
+}
+
+@keyframes B2 {
+    0% {
+        transform: rotateY(-25deg);
+    }
+
+    100% {
+        transform: rotateY(15deg);
+    }
+}
+
+.gw3 {
+    animation: B3 .5s ease-in-out infinite alternate;
+}
+
+@keyframes B3 {
+    0% {
+        transform: scale(.9);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+.gw4 {
+    animation: B4 .5s ease-in-out infinite alternate;
+}
+
+@keyframes B4 {
+    0% {
+        transform: skewX(-25deg);
+    }
+
+    100% {
+        transform: skewX(25deg);
+    }
+}
+
+.Translate input {
+    animation: a1 2s calc(var(--a) * 0.2s) ease infinite;
+}
+
+.Translate input:hover {
+    animation-play-state: paused;
+}
+
+@keyframes a1 {
+    0% {
+        transform: translateX(-10%);
+    }
+
+    25% {
+        transform: translateX(10%);
+    }
+
+    50% {
+        transform: translateX(-10%);
+    }
+
+    75% {
+        transform: translateX(10%);
+    }
+
+    100% {
+        transform: translateX(-10%);
+    }
+}
+
+.Rotate input {
+    animation: a2 2s calc(var(--a) * 0.075s) ease infinite;
+}
+
+.Rotate input:hover {
+    animation-play-state: paused;
+}
+
+@keyframes a2 {
+    0% {
+        transform: rotateZ(10deg);
+    }
+
+    25% {
+        transform: rotateZ(-10deg);
+    }
+
+    50% {
+        transform: rotateZ(10deg);
+    }
+
+    75% {
+        transform: rotateZ(-10deg);
+    }
+
+    100% {
+        transform: rotateZ(10deg);
+    }
+}
+
+.Scale input {
+    animation: a3 1s ease infinite;
+}
+
+.Scale input:hover {
+    animation-play-state: paused;
+}
+
+@keyframes a3 {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(.8);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.Skew input {
+    animation: a4 2s calc(var(--a) * 0.075s) ease infinite;
+}
+
+.Skew input:hover {
+    animation-play-state: paused;
+}
+
+@keyframes a4 {
+    0% {
+        transform: skewX(25deg);
+    }
+
+    25% {
+        transform: skewX(-25deg);
+    }
+
+    50% {
+        transform: skewX(25deg);
+    }
+
+    75% {
+        transform: skewX(-25deg);
+    }
+
+    100% {
+        transform: skewX(25deg);
+    }
+}
+
+.speed input {
+    animation: a5 .5s calc(var(--a) * 0.075s) ease-in-out infinite alternate;
+}
+
+@keyframes a5 {
+    0% {
+        transform: translateX(-5%) rotateZ(5deg) scale(.9) skewX(5deg);
+    }
+
+    100% {
+        transform: translateX(5%) rotateZ(-5deg) scale(1.1) skewX(-5deg);
+    }
+}
+
+.A1:hover,
+.A2:hover,
+.A3:hover,
+.A4:hover,
+.A5:hover {
+    animation-play-state: paused;
+}
+
+.A1 {
+    animation: A1 2s ease infinite;
+}
+
+@keyframes A1 {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    25% {
+        transform: translateX(100%);
+    }
+
+    50% {
+        transform: translateX(-100%);
+    }
+
+    75% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.A2 {
+    animation: A2 2s ease infinite;
+}
+
+@keyframes A2 {
+    0% {
+        transform: rotateZ(25deg);
+    }
+
+    25% {
+        transform: rotateZ(-25deg);
+    }
+
+    50% {
+        transform: rotateZ(25deg);
+    }
+
+    75% {
+        transform: rotateZ(-25deg);
+    }
+
+    100% {
+        transform: rotateZ(25deg);
+    }
+}
+
+.A3 {
+    animation: A3 1s ease infinite;
+}
+
+@keyframes A3 {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(.75);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.A4 {
+    animation: A4 2s ease infinite;
+}
+
+@keyframes A4 {
+    0% {
+        transform: skewX(25deg);
+    }
+
+    25% {
+        transform: skewX(-25deg);
+    }
+
+    50% {
+        transform: skewX(25deg);
+    }
+
+    75% {
+        transform: skewX(-25deg);
+    }
+
+    100% {
+        transform: skewX(25deg);
+    }
+}
+
+.A5 {
+    animation: A5 6s ease infinite;
+}
+
+@keyframes A5 {
+    0% {
+        transform: translateX(-25%);
+        animation-timing-function: linear;
+    }
+
+    25% {
+        transform: translateX(25%) rotateZ(360deg);
+        animation-timing-function: ease;
+    }
+
+    50% {
+        transform: translateX(-25%) scale(.5);
+        animation-timing-function: ease-in-out;
+    }
+
+    75% {
+        transform: translateX(25%) skew(45deg) rotateZ(0deg) scaleX(1.5);
+        animation-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    }
+
+    100% {
+        transform: translateX(-25%) skew(-25deg);
+    }
+}

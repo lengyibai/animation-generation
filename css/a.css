@@ -1,0 +1,375 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@media screen and (min-width:1420px) {
+    html {
+        font-size: 150px;
+    }
+}
+
+@media screen and (max-width:1420px) {
+    html {
+        font-size: 130px;
+    }
+}
+
+@media screen and (max-width:1300px) {
+    html {
+        font-size: 110px;
+    }
+}
+
+@media screen and (max-width:1120px) {
+    html {
+        font-size: 90px;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    html {
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    html {
+        font-size: 175px;
+    }
+
+    body {
+        flex-direction: column;
+        overflow: scroll !important;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .code {
+        width: 100%;
+    }
+
+    .effect {
+        flex: none !important;
+        width: 100%;
+        height: 50vh !important;
+    }
+
+    .parameter {
+        width: 100%;
+        margin-top: .2rem
+            /* 35/175 */
+        ;
+    }
+
+    .last {
+        margin-bottom: .143rem
+            /* 25/175 */
+        ;
+    }
+
+    .Twhere,
+    .Rwhere,
+    .Swhere,
+    .Skwhere,
+    .speed {
+        justify-content: center;
+    }
+
+    .speed>div {
+        width: 50% !important;
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 25px;
+    }
+
+    .speed>div:nth-child(2n) {
+        justify-content: flex-start;
+        padding-left: 25px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    html {
+        font-size: 135px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    html {
+        font-size: 100px;
+    }
+}
+
+body {
+    display: flex;
+    min-width: 300px;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    overflow: hidden;
+    perspective: 1000px;
+}
+
+.code {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: .057rem
+        /* 10/175 */
+        .057rem
+        /* 10/175 */
+    ;
+    height: 100vh;
+    background-color: #000;
+    color: #fff;
+}
+
+.code>p {
+    font-size: .133rem
+        /* 20/150 */
+    ;
+    margin: .1rem
+        /* 15/150 */
+        0;
+}
+
+.code>textarea {
+    height: 0;
+    font-size: .12rem
+        /* 18/150 */
+    ;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    resize: none;
+    transition: all .5s;
+    text-align: center;
+    overflow: hidden;
+}
+
+.tip {
+    position: relative;
+    bottom: 0;
+    margin: 0 .057rem
+        /* 10/175 */
+    ;
+    color: rgb(255, 255, 255);
+    font-size: .114rem
+        /* 20/175 */
+    ;
+}
+
+.effect {
+    flex: 6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+}
+
+/* 盒子 */
+.box {
+    min-width: 55px;
+    min-height: 55px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 0.667rem
+        /* 100/150 */
+    ;
+    height: 0.667rem
+        /* 100/150 */
+    ;
+    color: #fff;
+    background-color: transparent;
+    font-weight: lighter;
+    font-size: 0.133rem
+        /* 20/150 */
+    ;
+    text-align: center;
+    border: 1px solid #fff;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.hidBox {
+    width: auto;
+    background-color: rgba(0, 0, 0, 0);
+    color: #fff;
+    font-size: 0.233rem
+        /* 35/150 */
+    ;
+}
+
+.parameter {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #000;
+    color: #fff;
+    padding-left: 0.067rem
+        /* 10/150 */
+    ;
+}
+
+/* 单一动画 */
+.Alone {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.12rem
+        /* 18/150 */
+    ;
+}
+
+div[class$='where']>p {
+    text-align: center;
+}
+
+/* 单一动画设置参数 */
+.setPara {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 顶部标题 */
+.title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: .057rem
+        /* 10/175 */
+    ;
+}
+
+/* 动画合集 */
+.Translate,
+.Rotate,
+.Scale,
+.Skew {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.Translate,
+.Rotate,
+.Scale,
+.Skew {
+    margin: .057rem
+        /* 10/175 */
+        0;
+}
+
+.Translate>.Twhere,
+.Rotate>.Rwhere,
+.Scale>.Swhere,
+.Skew>.Skwhere {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.Translate>.Twhere input,
+.Rotate>.Rwhere input,
+.Scale>.Swhere input,
+.Skew>.Skwhere input {
+    margin-left: .057rem
+        /* 10/175 */
+    ;
+}
+
+/* 输入框与文字布局 */
+.flex {
+    display: flex;
+    justify-content: center;
+}
+
+/* 输入框 */
+input[type='text'] {
+    min-width: 40px;
+    min-height: 13px;
+    width: 0.5rem
+        /* 75/150 */
+    ;
+    height: 0.167rem
+        /* 25/150 */
+    ;
+    text-align: center;
+    border: none;
+    border-bottom: 0.013rem
+        /* 2/150 */
+        solid #fff;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0);
+    font-size: .086rem
+        /* 15/175 */
+    ;
+}
+
+input {
+    color: #fff;
+}
+
+input[type="button"] {
+    margin-bottom: .029rem
+        /* 5/175 */
+    ;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid #fff;
+    padding: .029rem
+        /* 5/175 */
+    ;
+    transition: all .5s;
+}
+
+input[type="button"]:hover {
+    transition: all .1s;
+    background-color: #fff;
+    color: #000;
+    animation-play-state: paused;
+}
+
+input[type="button"]:active {
+    transition: all .05s;
+}
+
+.alone {
+    margin-top: .086rem
+        /* 15/175 */
+    ;
+}
+
+/* 速度曲线 */
+.speed {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0.033rem
+        /* 5/150 */
+        0;
+}
+
+.speed>div {
+    width: 25%;
+}
+
+.last {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: .086rem
+        /* 15/175 */
+    ;
+}
+
+.text {
+    z-index: 999;
+}
+
+.goWhat {
+    white-space: nowrap
+}
